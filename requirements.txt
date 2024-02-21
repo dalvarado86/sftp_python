@@ -1,0 +1,6 @@
+paramiko=2.8.1 # for latest versions RSA certs don't work with servers with OpenSSH < 7.8
+six # paramiko dependency
+pip install fabric # paramiko dependency to work with ssh
+pip uninstall -y cryptography # uninstall 37.0.0
+pip install cryptography==36.0.2 # Paramiko causing Warnings due to Blowfish deprecation in cryptography 37.0.0
+pip install tenacity
